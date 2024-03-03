@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .checkbox-wrapper-53 {
+      display: inline-flex;
+      background-color: aquamarine;
+    }
+
+    .checkbox-wrapper-53 input[type="checkbox"] {
+      visibility: hidden;
+      display: none;
+    }
+
+    .checkbox-wrapper-53 .container2 {
+      margin: 3px;
+      display: block;
+      position: relative;
+      cursor: pointer;
+      font-size: 20px;
+      user-select: none;
+    }
+
+    .checkbox-wrapper-53 .checkmark {
+      position: relative;
+      top: 0;
+      left: 0;
+      height: 1.3em;
+      width: 1.3em;
+      background-color: #ccc;
+      border-radius: 100%;
+      background: green;
+      box-shadow: 3px 3px 5px #c5c5c5, -3px -3px 5px #ffffff;
+    }
+
+    .checkbox-wrapper-53 .container2 input:checked ~ .checkmark {
+      box-shadow: inset 3px 3px 5px #c5c5c5, inset -3px -3px 5px #ffffff;
+    }
+
+    .checkbox-wrapper-53 .checkmark:after {
+      content: "";
+      position: absolute;
+      opacity: 0;
+    }
+
+    .checkbox-wrapper-53 .container2 input:checked ~ .checkmark:after {
+      opacity: 1;
+    }
+
+    .checkbox-wrapper-53 .container2 .checkmark:after {
+      left: 0.45em;
+      top: 0.25em;
+      width: 0.25em;
+      height: 0.5em;
+      border: solid darkgray;
+      border-width: 0 0.15em 0.15em 0;
+      transform: rotate(45deg);
+      transition: all 250ms;
+    }
+  </style>
+</head>
+<body>
+  <div class="checkbox-wrapper-53">
+    <label class="container2">
+      <input type="checkbox" id="checkbox1" onclick="updateSelected(this)">
+      <div class="checkmark"></div>
+    </label>
+    <label class="container2">
+      <input type="checkbox" id="checkbox2" onclick="updateSelected(this)">
+      <div class="checkmark"></div>
+    </label>
+    <label class="container2">
+      <input type="checkbox" id="checkbox3" onclick="updateSelected(this)">
+      <div class="checkmark"></div>
+    </label>
+    <label class="container2">
+      <input type="checkbox" id="checkbox4" onclick="updateSelected(this)">
+      <div class="checkmark"></div>
+    </label>
+    <label class="container2">
+      <input type="checkbox" id="checkbox5" onclick="updateSelected(this)">
+      <div class="checkmark"></div>
+    </label>
+    <label class="container2">
+      <input type="checkbox" id="checkbox6" onclick="updateSelected(this)">
+      <div class="checkmark"></div>
+    </label>
+  </div>
+
+  <script>
+    var selectedCheckbox;
+
+    function updateSelected(checkbox) {
+      // Uncheck all checkboxes
+      document.querySelectorAll('.checkbox-wrapper-53 input[type="checkbox"]').forEach(function (checkbox) {
+        checkbox.checked = false;
+      });
+
+      // Check the selected checkbox
+      checkbox.checked = true;
+
+      // Update the selectedCheckbox variable
+      selectedCheckbox = checkbox.id;
+    }
+  </script>
+</body>
+</html>

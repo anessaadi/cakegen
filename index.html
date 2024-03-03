@@ -1,0 +1,1162 @@
+<!-- 1b1b1b -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  .img15 {
+  position: absolute;
+  bottom: 0%;
+  top: 150px;
+  left: 25px;
+
+  width: 400px; /* Set to the same width as the existing image */
+  height: auto; /* Maintain the aspect ratio */
+  z-index: 3; /* Adjust the z-index to make it appear over the existing image */
+
+
+
+
+  
+    /* position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    top: 150px;
+    float: right;
+    z-index: 2; */
+}
+  /* The Modal (background) */
+.modal {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  
+}
+.txtmodal{
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 300px; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.copy-message {
+      display: none;
+      margin-top: 10px;
+      padding: 8px;
+      /* background-color: #4caf50; */
+      color: black;
+      text-align: center;
+      transition: opacity 0.5s;
+    }
+
+    /* Button Styling */
+    .buttonmodal {
+      background-color: #7f199b;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .buttonmodal:hover {
+      background-color: #68197d;
+    }
+
+
+
+
+
+
+
+    body{
+        background-color: black;
+    }
+    .container{
+        background-color: #1b1b1b;
+        width: 900px;
+        height: 70vh;
+        position: relative;
+        margin-top: 100px;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 25px;
+        overflow: hidden;
+        /* display: flex; */
+    }
+    .left{
+        position: relative;
+        width: 50%;
+        height: 100%;
+        /* background-color: aquamarine; */
+
+    }
+    .right{
+        position: relative;
+        width: 50%;
+        height: 100%;
+        /* background-color: purple; */
+        display: inline;
+        
+        
+
+    }
+    .edit{
+      position: absolute;
+        width: 50%;
+        height: 100%;
+        /* background-color: red; */
+        /* display: inline; */
+        left: 50%;
+    }
+    .floating-image1 {
+      /* position: absolute; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    position: relative;
+    z-index: 8; 
+    top: -252px;
+    right: 0px;
+  }
+  .floating-image2 {
+    /* position: absolute; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px; 
+    position: relative;
+   
+    z-index: 8; 
+    top: -655.9px;
+    right: 0px;
+  }
+  .floating-image3 {
+    /* position: absolute; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px; 
+    position: relative;
+   
+    z-index: 7; 
+    right: 0px;
+    top: 150px;
+  }
+    .top{
+        display: flex;
+        width: 100%;
+        height: 80%;
+        /* background-color: pink; */
+
+    }
+
+
+
+
+
+    /* CSS */
+.button-89 {
+    position: relative;
+    display: block;
+    margin-left: 18%;
+    margin-top: 20px;
+    height: 50px;
+    width: 200px;
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  /* --color: #373B44; */
+  --color: white;
+  
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-89:hover,
+.button-89:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.button-89:active {
+  background: var(--color);
+  color: #fff;
+}
+.imgempty{
+    width: 400px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0%;
+    top: 150px;
+    
+    /* z-index: 2; */
+}
+
+
+.hidesquare{
+      position: absolute;
+      height: 50px;
+      width: 110px;
+      background-color: rgb(18, 18, 18);
+      top: 0;
+      right: 0;
+      z-index: 0;
+      
+    
+    }
+    .header{
+    position: fixed;
+    width: 102%;
+    height: 60px;
+    background-color: rgb(18, 18, 18);
+    direction: rtl;
+    top: -10px;
+    left: -10px;
+  }
+  .gifticon{
+    display: inline-block;
+    filter: brightness(0) invert(1);
+    margin-right: 10px;
+    margin-top: 14px;
+    height: 37px;
+    z-index: 7;
+
+
+  }
+  .menuicon{
+    filter: brightness(0) invert(1);
+    
+    margin-right: 30px;
+    height: 37px;
+    z-index: 6;
+    
+    
+
+
+
+
+  }
+  .logo{
+    width: 120px;
+    position: fixed;
+    top: -17px;
+    left: -30px;
+  }
+  @keyframes slideInRight {
+  0%, 100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+  .getgift{
+    color: white;
+    top: 33px;
+    right: 125px;
+    position: absolute;
+    font-family: "Lucida Handwriting", cursive;
+    font-size:x-small;
+
+
+    line-height: 20%;
+    animation: slideInRight 6s infinite, slideOutRight 6s infinite; /* Adjust the duration as needed */
+    animation-delay: 3s; /* Delay for the second animation */
+  }
+
+
+
+  .persondetails{
+    background-color: #323232;
+    border-radius:25px ;
+    width: 90%;
+    height: 130px;
+    margin-left: 10%;
+    margin-right: 0;
+    margin-top: 40px;
+    
+    
+  }
+  .cakedetails{
+    background-color: #323232;
+    border-radius:25px ;
+    width: 90%;
+    height: 200px;
+    margin-left: 10%;
+    margin-right: 0;
+    margin-top: 40px;
+  }
+  .titlebox{
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: white;
+    margin-left: 30px;
+    margin-top: -20px;
+    position: absolute;
+    margin-bottom: 50px;
+    
+  }
+  .name{
+   
+    height: 10px;
+    width: 100%;
+    /* background-color: yellow; */
+    
+    
+    
+   
+  }
+  .age{
+    
+    height: 10px;
+    width: 100%;
+    
+    /* background-color: yellowgreen; */
+
+  }
+  .name1{
+    color: #878d9c;
+    /* margin-top: 300px; */
+    margin-left: 50px;
+    display: inline;
+    font-weight: 500;
+    
+    
+    font-family: "Lucida Console", "Courier New", monospace;
+
+  }
+  .age1{
+    color: #878d9c;
+    /* margin-top: 30px; */
+    margin-left: 50px;
+    display: inline;
+    font-weight: 500;
+    
+    
+    font-family: "Lucida Console", "Courier New", monospace;
+
+  }
+  .input{
+    margin-left: 50px;
+    position: absolute;
+    background-color: transparent;
+    border-style: none;
+    border-bottom: solid 1px #878d9c;
+    color: #fff;
+  }
+  .line{
+    /* background-color: pink; */
+    height: 40px;
+    width: 80%;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    display: inline-flex;
+  }
+  .lineleft{
+    display: inline;
+    /* background-color: red; */
+    height: 40px;
+    width: 15%;
+
+  }
+  .lineright{
+    display: inline;
+    margin-left: 20px;
+    /* background-color: peru; */
+    height: 40px;
+    width: 80%;
+  }
+  .checkbox-wrapper-53 {
+      margin-top: 6px;
+      display: inline-flex;
+      /* background-color: aquamarine; */
+    }
+
+    .checkbox-wrapper-53 input[type="checkbox"] {
+      visibility: hidden;
+      display: none;
+    }
+
+    .checkbox-wrapper-53 .container2 {
+      margin: 4px;
+      display: block;
+      position: relative;
+      cursor: pointer;
+      font-size: 20px;
+      user-select: none;
+    }
+    #ch11{
+      background: linear-gradient(45deg, #efefef 50%, #3872ae 50%);
+    }
+    #ch12{
+      background: linear-gradient(45deg, #efefef 50%, #a21820 50%);
+    }
+    #ch13{
+      background: linear-gradient(45deg, #efefef 50%, #8b38ad 50%);
+    }
+    #ch14{
+      background:  #efefef ;
+    }
+    #ch15{
+      background: linear-gradient(45deg, #efefef 50%, #38ae4d 50%);
+    }
+    #ch16{
+      background: linear-gradient(45deg, #efefef 50%, #bfc34a 50%);
+    }
+
+    #ch21{
+      background: #176aa8;
+    }
+    #ch22{
+      background: #772f00;
+    }
+    #ch23{
+      background: #7f3e91;
+    }
+    #ch24{
+      background: #efefef;
+    }
+    #ch25{
+      background: #d3b300;
+    }
+    #ch26{
+      background: #ffb6bc;
+    }
+
+
+    #ch31{
+      background: #4c9fd1;
+    }
+    #ch32{
+      background: #d9c475;
+    }
+    #ch33{
+      background: #efefef;
+    }
+    #ch34{
+      background: #bf2631;
+    }
+    #ch35{
+      background: #65b231;
+    }
+    #ch36{
+      background: #e36487;
+    }
+
+    .checkbox-wrapper-53 .checkmark {
+      position: relative;
+      top: 0;
+      left: 0;
+      height: 1.1em;
+      width: 1.1em;
+      background-color: #ccc;
+      border-radius: 100%;
+      /* background: green; */
+      box-shadow: 1px 1px 2px #222222, -1px -1px 2px #222222;
+    }
+
+    .checkbox-wrapper-53 .container2 input:checked ~ .checkmark {
+      /* box-shadow: inset 3px 3px 5px #c5c5c5, inset -3px -3px 5px #ffffff; */
+    }
+
+    .checkbox-wrapper-53 .checkmark:after {
+      content: "";
+      position: absolute;
+      opacity: 0;
+    }
+
+    .checkbox-wrapper-53 .container2 input:checked ~ .checkmark:after {
+      opacity: 1;
+    }
+
+    .checkbox-wrapper-53 .container2 .checkmark:after {
+      left: 0.45em;
+      top: 0.25em;
+      width: 0.25em;
+      height: 0.5em;
+      border: solid darkgray;
+      border-width: 0 0.15em 0.15em 0;
+      transform: rotate(45deg);
+      transition: all 250ms;
+    }
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+/* ///////////////////////// */
+.btn {
+  position: relative;
+    display: block;
+    margin-left: 18%;
+    margin-top: 20px;
+    
+  border: none;
+  width: 12em;
+  height: 3.5em;
+  border-radius: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background-color: #fff;
+  border: 0 solid #e2e8f0;
+  cursor: pointer;
+  transition: all 450ms ease-in-out;
+}
+
+.sparkle {
+  fill: #000;
+  transition: all 800ms ease;
+}
+
+.text {
+  font-weight: 600;
+  color: #000;
+  font-size: medium;
+}
+
+.btn:hover {
+  background: linear-gradient(0deg,#A47CF3,#683FEA);
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+  inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+  0px 0px 0px 4px rgba(255, 255, 255, 0.2),
+  0px 0px 60px 0px #9917FF;
+  transform: translateY(-2px);
+}
+
+.btn:hover .text {
+  color: white;
+}
+
+.btn:hover .sparkle {
+  fill: white;
+  transform: scale(1.2);
+} 
+
+
+
+
+
+
+
+
+
+
+
+  @media only screen and (max-width: 768px) {
+    .cakedetails{
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    .persondetails{
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    .container{
+      width: 90vw;
+      height: 85vh;
+      margin-top: 70px;
+      display: flex;
+      flex-direction: column;
+      
+    }
+    .left{
+      width: 100%;
+      height: 60%;
+      /* background-color: aquamarine; */
+
+    }
+    .right{
+      width: 100%;
+      height: 20%;
+      
+
+    }
+    .edit{
+      top: 45%;
+      width: 100%;
+      height: 20%;
+      left: 0%;
+    }
+    .floating-image1{
+      width: 300px;
+      top: -232px;
+    }
+    .floating-image2{
+      width: 300px;
+      top: -534.5px;
+      /* z-index: 8; */
+    }
+    .floating-image3{
+      width: 300px;
+      top: 70px;
+      /* z-index: 7; */
+    }
+    .top{
+      width: 100%;
+      height: 80%;
+      
+      display: flex;
+      flex-direction: column;
+
+    }
+    /* width: 400px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0%;
+    top: 150px; */
+    .imgempty{
+      width: 300px;
+      top: 50px;
+      
+    }
+    
+    
+    .btn{
+      /* display: none; */
+      /* position: relative; */
+    /* display: block; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    /* height: 50px;
+    width: 160px; */
+    }
+    .name input{
+    margin-left: 10px;
+    position: absolute;
+    
+
+  }
+  .age input{
+    margin-left: 10px;
+    position: absolute;
+
+  }
+  .name1{
+    margin-left: 40px;
+
+  }
+  .age1{
+    margin-left: 40px;
+
+  }
+    
+  }
+ 
+  @media only screen and  (min-width:769px) and (max-width:920px) {
+    .container{
+      width: 90%;
+    }
+
+    
+
+    .imgempty{
+      width: 95%;
+      position: absolute;
+      top: auto;
+      bottom: -20px;
+    }
+    .floating-image1{
+      position: absolute;
+      width: 95%;
+      top: auto;
+      bottom: 89px;
+      right: 5%;
+    }
+    .floating-image2{
+      position: absolute;
+      width: 95%;
+      top: auto;
+      bottom: 89px;
+      right: 5%;
+    }
+    .floating-image3{
+      position: absolute;
+      width: 95%;
+      top: auto;
+      bottom: 89px;
+      right: 5%;
+    }
+    .img15{
+      width: 95%;
+      position: absolute;
+      top: auto;
+      bottom: -120px;
+      left: 0px;
+      right: 2.6%;
+
+    }
+    .btn{
+      margin-left: 18%;
+    }
+
+
+  }
+
+
+
+
+
+
+
+
+</style>
+<body>
+    <div class="header">
+        <!-- <span class="getgift">!Get yourself a gift</span> -->
+        <span class="getgift">!Get him/her a gift</span>
+        <div class="hidesquare"></div>
+        <img class="logo" src="logo.png"/>
+        
+        <img class="menuicon" src="bx-menu.svg"/>
+        <img class="gifticon" src="bx-gift.svg"/>
+        
+        
+  
+        
+      </div>
+    <div class="container">
+        <div class="top">
+            <div class="left">
+              <div class="persondetails">
+                <h1 class="titlebox">Person</h1>
+                <div class="name">
+                  <br><br>
+                  <h4 class="name1">Name</h4>
+                  <input class="input" type="text" id="fname" name="fname" placeholder="His/her name.."><br><br>
+                </div>
+                <br><br><br><br>
+                <div class="age">
+                  <h4 class="age1">Age</h4>&nbsp&nbsp
+                  <input class="input" type="number" id="age" name="age" min="1" placeholder="His/her age">
+                </div>
+                
+
+
+              </div>
+              <div class="cakedetails">
+                <h1 class="titlebox">Cake</h1>
+                <br><br>
+              <div class="line">
+                <div class="lineleft">
+                  <img class="pic123" width="37px" src="pic1.png"/>
+                </div>
+                <div class="lineright">
+                  <div class="checkbox-wrapper-53 checkbox-set-1">
+                    <label class="container2">
+                      <input type="checkbox" id="11" onclick="updateSelected(this)">
+                      <div class="checkmark" id="ch11"></div>
+                    </label>
+                    <label class="container2">
+                      <input type="checkbox" id="12" onclick="updateSelected(this)">
+                      <div class="checkmark" id="ch12"></div>
+                    </label>
+                    <label class="container2">
+                      <input type="checkbox" id="13" onclick="updateSelected(this)">
+                      <div class="checkmark" id="ch13"></div>
+                    </label>
+                    <label class="container2">
+                      <input type="checkbox" id="14" onclick="updateSelected(this)">
+                      <div class="checkmark" id="ch14"></div>
+                    </label>
+                    <label class="container2">
+                      <input type="checkbox" id="15" onclick="updateSelected(this)">
+                      <div class="checkmark" id="ch15"></div>
+                    </label>
+                    <label class="container2">
+                      <input type="checkbox" id="16" onclick="updateSelected(this)">
+                      <div class="checkmark" id="ch16"></div>
+                    </label>
+                  </div>
+                </div>
+
+              </div>
+              <div class="line">
+                <div class="lineleft">
+                  <img class="pic123" width="37px" src="pic2.png"/>
+                </div>
+                <div class="lineright">
+                  <div class="checkbox-wrapper-53 checkbox-set-2">
+                    <label class="container2">
+                      <input type="checkbox" id="21" onclick="updateSelected(this)">
+                      <div class="checkmark" id="ch21" ></div>
+                    </label>
+                    <label class="container2">
+                      <input type="checkbox" id="22" onclick="updateSelected(this)">
+                      <div class="checkmark" id="ch22"></div>
+                    </label>
+                    <label class="container2">
+                      <input type="checkbox" id="23" onclick="updateSelected(this)">
+                      <div class="checkmark" id="ch23"></div>
+                    </label>
+                    <label class="container2">
+                      <input type="checkbox" id="24" onclick="updateSelected(this)">
+                      <div class="checkmark" id="ch24"></div>
+                    </label>
+                    <label class="container2">
+                      <input type="checkbox" id="25" onclick="updateSelected(this)">
+                      <div class="checkmark" id="ch25"></div>
+                    </label>
+                    <label class="container2">
+                      <input type="checkbox" id="26" onclick="updateSelected(this)">
+                      <div class="checkmark" id="ch26"></div>
+                    </label>
+                  </div>
+                </div>
+                
+
+              </div>
+              <div class="line">
+                <div class="lineleft">
+                  <img class="pic123" width="37px" src="pic3.png"/>
+                </div>
+                <div class="lineright">
+                  <div class="checkbox-wrapper-53 checkbox-set-3">
+                    <label class="container2">
+                      <input type="checkbox" id="31" onclick="updateSelected(this)">
+                      <div class="checkmark" id="ch31"></div>
+                    </label>
+                    <label class="container2">
+                      <input type="checkbox" id="32" onclick="updateSelected(this)">
+                      <div class="checkmark" id="ch32"></div>
+                    </label>
+                    <label class="container2">
+                      <input type="checkbox" id="33" onclick="updateSelected(this)">
+                      <div class="checkmark" id="ch33"></div>
+                    </label>
+                    <label class="container2">
+                      <input type="checkbox" id="34" onclick="updateSelected(this)">
+                      <div class="checkmark" id="ch34"></div>
+                    </label>
+                    <label class="container2">
+                      <input type="checkbox" id="35" onclick="updateSelected(this)">
+                      <div class="checkmark" id="ch35"></div>
+                    </label>
+                    <label class="container2">
+                      <input type="checkbox" id="36" onclick="updateSelected(this)">
+                      <div class="checkmark" id="ch36"></div>
+                    </label>
+                  </div>
+                </div>
+
+              </div>
+              </div>
+
+            </div>
+            <div class="right">
+
+              
+              
+              <img class="imgempty" src="./empty001.png" alt="Non-Selectable Image" draggable="false" oncontextmenu="return false;"/>
+              <!-- <img class="img15" src="./15.png"/> -->
+              
+            </div>
+            <div class="edit">
+              <img class="floating-image3" src="./23.png" alt="Non-Selectable Image" draggable="false" oncontextmenu="return false;"/>
+              <img class="floating-image1" src="./13.png" alt="Non-Selectable Image" draggable="false" oncontextmenu="return false;"/>
+              <img class="floating-image2" src="./36.png" alt="Non-Selectable Image" draggable="false" oncontextmenu="return false;"/>
+
+            </div>
+            
+        </div>
+        <!-- <button class="button-89" role="button" onclick="generateLink()">Generate link</button> --> 
+        <button class="btn" role="button" onclick="generateLink()" >
+          <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1" id="Layer_1" class="sparkle">
+              <path d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"></path>
+          </svg>
+      
+          <span class="text">Generate</span>
+      </button>
+        
+
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+  var selectedCheckboxSet1 = null;
+  var selectedCheckboxSet2 = null;
+  var selectedCheckboxSet3 = null;
+
+  function updateSelected(checkbox, setNumber) {
+    switch (setNumber) {
+      case 1:
+        if (selectedCheckboxSet1 && selectedCheckboxSet1 !== checkbox) {
+          selectedCheckboxSet1.checked = false;
+        }
+        selectedCheckboxSet1 = checkbox.checked ? checkbox : null;
+        updateFloatingImageSrc(selectedCheckboxSet1, 1);
+        break;
+      case 2:
+        if (selectedCheckboxSet2 && selectedCheckboxSet2 !== checkbox) {
+          selectedCheckboxSet2.checked = false;
+        }
+        selectedCheckboxSet2 = checkbox.checked ? checkbox : null;
+        updateFloatingImageSrc(selectedCheckboxSet2, 2);
+        break;
+      case 3:
+        if (selectedCheckboxSet3 && selectedCheckboxSet3 !== checkbox) {
+          selectedCheckboxSet3.checked = false;
+        }
+        selectedCheckboxSet3 = checkbox.checked ? checkbox : null;
+        updateFloatingImageSrc(selectedCheckboxSet3, 3);
+        break;
+      default:
+        break;
+    }
+  }
+
+  function updateFloatingImageSrc(checkbox, imageNumber) {
+    var floatingImage = document.querySelector('.floating-image' + imageNumber);
+    if (checkbox) {
+      var checkboxId = checkbox.id;
+      floatingImage.src = checkboxId + '.png';
+    }
+  }
+
+  // Set default checked checkboxes
+  document.getElementById('14').checked = true;
+  document.getElementById('24').checked = true;
+  document.getElementById('33').checked = true;
+
+  // Update floating images based on default checked checkboxes
+  updateSelected(document.getElementById('14'), 1);
+  updateSelected(document.getElementById('24'), 2);
+  updateSelected(document.getElementById('33'), 3);
+
+  // Event listeners for checkbox sets
+  document.querySelectorAll('.checkbox-set-1 input[type="checkbox"]').forEach(function (checkbox) {
+    checkbox.addEventListener('click', function () {
+      updateSelected(checkbox, 1);
+    });
+  });
+
+  document.querySelectorAll('.checkbox-set-2 input[type="checkbox"]').forEach(function (checkbox) {
+    checkbox.addEventListener('click', function () {
+      updateSelected(checkbox, 2);
+    });
+  });
+
+  document.querySelectorAll('.checkbox-set-3 input[type="checkbox"]').forEach(function (checkbox) {
+    checkbox.addEventListener('click', function () {
+      updateSelected(checkbox, 3);
+    });
+  });
+});
+      var selectedCheckboxSet1 = null;
+      var selectedCheckboxSet2 = null;
+      var selectedCheckboxSet3 = null;
+
+  
+      function updateSelected(checkbox, setNumber) {
+        switch (setNumber) {
+          case 1:
+            if (selectedCheckboxSet1 && selectedCheckboxSet1 !== checkbox) {
+              selectedCheckboxSet1.checked = false;
+            }
+            selectedCheckboxSet1 = checkbox.checked ? checkbox : null;
+            break;
+          case 2:
+            if (selectedCheckboxSet2 && selectedCheckboxSet2 !== checkbox) {
+              selectedCheckboxSet2.checked = false;
+            }
+            selectedCheckboxSet2 = checkbox.checked ? checkbox : null;
+            break;
+          case 3:
+            if (selectedCheckboxSet3 && selectedCheckboxSet3 !== checkbox) {
+              selectedCheckboxSet3.checked = false;
+            }
+            selectedCheckboxSet3 = checkbox.checked ? checkbox : null;
+            break;
+          default:
+            break;
+        }
+      }
+      function updateFloatingImageSrc(checkbox, imageNumber) {
+  var floatingImage = document.querySelector('.floating-image' + imageNumber);
+  if (checkbox) {
+    var checkboxId = checkbox.id;
+    floatingImage.src = checkboxId + '.png';
+  }
+}
+
+document.querySelectorAll('.checkbox-set-1 input[type="checkbox"]').forEach(function (checkbox) {
+  checkbox.addEventListener('click', function () {
+    updateSelected(checkbox, 1);
+  });
+});
+
+document.querySelectorAll('.checkbox-set-2 input[type="checkbox"]').forEach(function (checkbox) {
+  checkbox.addEventListener('click', function () {
+    updateSelected(checkbox, 2);
+  });
+});
+
+document.querySelectorAll('.checkbox-set-3 input[type="checkbox"]').forEach(function (checkbox) {
+  checkbox.addEventListener('click', function () {
+    updateSelected(checkbox, 3);
+  });
+});
+      
+      
+    
+function generateLink() {
+    var nameValue = document.getElementById('fname').value;
+    var ageValue = document.getElementById('age').value;
+
+    // Validate input fields
+    if (nameValue.trim() === '' || ageValue.trim() === '') {
+        alert('Please fill in all required fields.');
+        return;
+    }
+
+    // Initialize variables for checkbox IDs
+    var checkbox1 = '14';
+    var checkbox2 = '24';
+    var checkbox3 = '33';
+
+    // Update checkbox IDs if selected
+    if (selectedCheckboxSet1) {
+        checkbox1 = selectedCheckboxSet1.id;
+    }
+
+    if (selectedCheckboxSet2) {
+        checkbox2 = selectedCheckboxSet2.id;
+    }
+
+    if (selectedCheckboxSet3) {
+        checkbox3 = selectedCheckboxSet3.id;
+    }
+
+    // Concatenate name, age, and checkbox IDs with '&' as separator
+    var link = `file:///C:/Users/NITRO%205/Documents/nounouch%20website/index.html?a=${nameValue}_${ageValue}_${checkbox1}_${checkbox2}_${checkbox3}`;
+
+    // Create modal
+    var modal = document.createElement('div');
+    modal.className = 'modal';
+
+    // Create content for the modal
+    var modalContent = '<div class="modal-content">';
+    modalContent += '<span class="close" onclick="closeModal()">&times;</span>';
+    modalContent += `<p class="txtmodal">Link: <input type="text" id="generatedLink" value="${link}" readonly></p>`;
+    modalContent += '<button class="buttonmodal" onclick="copyLink()">Copy Link</button>';
+    modalContent += '<div class="copy-message" id="copyMessage">Copied! Share it <3</div>';
+    modalContent += '</div>';
+    modal.innerHTML = modalContent;
+
+    // Append modal to the body
+    document.body.appendChild(modal);
+}
+  
+      function copyLink() {
+        var generatedLink = document.getElementById('generatedLink');
+        generatedLink.select();
+        document.execCommand('copy');
+        var copyMessage = document.getElementById('copyMessage');
+        copyMessage.style.display = 'inline-block';
+        setTimeout(function() {
+          copyMessage.style.opacity = '0';
+          setTimeout(function() {
+            copyMessage.style.display = 'none';
+            copyMessage.style.opacity = '1';
+            
+          }, 500);
+        }, 2000);
+        
+      }
+  
+      function closeModal() {
+        var modal = document.querySelector('.modal');
+        modal.parentNode.removeChild(modal);
+      }
+  
+      document.querySelectorAll('.checkbox-set-1 input[type="checkbox"]').forEach(function (checkbox) {
+        checkbox.addEventListener('click', function () {
+          updateSelected(checkbox, 1);
+        });
+      });
+  
+      document.querySelectorAll('.checkbox-set-2 input[type="checkbox"]').forEach(function (checkbox) {
+        checkbox.addEventListener('click', function () {
+          updateSelected(checkbox, 2);
+        });
+      });
+  
+      document.querySelectorAll('.checkbox-set-3 input[type="checkbox"]').forEach(function (checkbox) {
+        checkbox.addEventListener('click', function () {
+          updateSelected(checkbox, 3);
+        });
+      });
+    </script>
+</body>
+</html>
